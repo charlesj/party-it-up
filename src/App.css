@@ -13,3 +13,7 @@
   margin: 20px;
   padding: 20px;
 }
+
+.uploaded_image {
+  max-width: 400px;
+}

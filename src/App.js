@@ -35,19 +35,16 @@ const App = () => {
           <li>
             <p>Choose a photo</p>
             <div><input type='file' onChange={receiveFile} /></div>
-            <div className='uploaded_file'>{userFile && <img alt='uploaded file' src={URL.createObjectURL(userFile)} />}</div>
-          </li>
-          <li>
-            <p>Choose Options</p>
-
+            <div className='uploaded_file'>{userFile && <img className='uploaded_image' alt='uploaded file' src={URL.createObjectURL(userFile)} />}</div>
           </li>
           <li>
             <p>Party!</p>
             {userFile && <button onClick={startProcessing}>Party It Up</button>}
-            {outputFile && <img alt='output' src={outputFile} />}
+            <div className='uploaded_file'>{outputFile && <img alt='output' src={outputFile} />}</div>
           </li>
         </ol>
       </div>
+      <div><a href='https://github.com/charlesj/party-it-up'>Source Code</a></div>
     </div>
   );
 }
